@@ -3,12 +3,16 @@ import styled from "styled-components";
 
 import symbol from "../assets/images/symbol.png"
 import AppBar from "../components/AppBar";
+import NavBar from "../components/NavBar";
 
 const Home = () => {
     return (
       <Container>
         <AppBar />
-        <LogoImg src={symbol} />
+        <ContentContainer>
+          <LogoImg src={symbol} />
+        </ContentContainer>
+        <NavBar />
       </Container>
     );
   };
@@ -20,7 +24,15 @@ const Home = () => {
   flex-direction: column;
   align-items: flex-start;
   color: white;
+
+  // 확인하면서 수정 필요...
+  //height: 100vh;
+  height: calc(100vh - 10rem);
 `;
+
+const ContentContainer = styled.div`
+  flex: 1;
+`
 
   const LogoImg = styled.img`
   width: 12.5rem;
