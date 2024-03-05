@@ -3,17 +3,39 @@ import styled from "styled-components";
 import NavBar from "../../components/NavBar";
 import AppBar from "../../components/AppBar";
 import ProfilePic from "./ProfilePic";
-import SelectBtn from "./SelectBtn1";
+import SelectBtn1 from "./SelectBtn1";
 
 const MyPage = () => {
     return (
         <div>
-            <AppBar />
-            <ProfilePic />
-            <SelectBtn1 />
-            <NavBar />
+            <MainContainer>
+                <AppBar />
+                <Container>
+                    <ProfilePic />
+                    <SelectBtn1 />
+                    <SelectBtn1 />
+                    <SelectBtn1 />
+                    <SelectBtn1 />
+                </Container>
+                <NavBar />
+            </MainContainer>
         </div>
     );
 };
+
+const MainContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: calc(100vh - 10rem);
+`;
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+`;
 
 export default MyPage;
