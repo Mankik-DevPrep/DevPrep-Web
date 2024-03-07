@@ -25,13 +25,14 @@ const Container = styled.div`
     align-items: flex-start;
     color: white;
 
-    // 확인하면서 수정 필요...
+    // flex 사용시 조정 필요한 속성
     //height: 100vh;
-    height: calc(100vh - 10rem);
+    //height: calc(100vh - 10rem);
 `;
 
 const ContentContainer = styled.div`
     flex: 1;
+    //background-color: red;
 `;
 
 const LogoImg = styled.img`
