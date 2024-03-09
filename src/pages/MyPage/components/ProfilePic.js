@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import MedalImg from "../../assets/images/level-gold.svg";
-import ProfilePicDummy from "../../assets/images/profilePicDummy.svg";
+import MedalImg from "../../../assets/images/level-gold.svg";
+import ProfilePicDummy from "../../../assets/images/profilePicDummy.svg";
 
 const Frame = styled.img`
     width: 80px;

@@ -1,9 +1,11 @@
+{/* 홈 화면 */}
+
 import React from "react";
 import styled from "styled-components";
 
-import symbol from "../assets/images/symbol.png";
-import AppBar from "../components/AppBar";
-import NavBar from "../components/NavBar";
+import symbol from "../../assets/images/symbol.png";
+import AppBar from "../../components/AppBar";
+import NavBar from "../../components/NavBar";
 
 const Home = () => {
     return (
