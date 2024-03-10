@@ -6,6 +6,7 @@ const AppBar = () => {
     // 로고 클릭시 홈화면으로 이동
     const navigate = useNavigate();
     const goToHome = () => {
+        console.log("gotohome")
         navigate("/");
     };
 

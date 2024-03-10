@@ -4,6 +4,7 @@ import styled from "styled-components";
 import symbol from "../../assets/images/symbol.png";
 import AppBar from "../../components/AppBar";
 import NavBar from "../../components/NavBar";
+import CommonButton from "../../components/CommonButton";
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <AppBar />
             <ContentContainer>
                 <LogoImg src={symbol} />
+                <CommonButton text="PREP START!" />
             </ContentContainer>
             <NavBar />
         </Container>
