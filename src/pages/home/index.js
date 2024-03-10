@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 import symbol from "../../assets/images/symbol.png";
-import AppBar from "../../components/AppBar";
+import HomeBar from "../../components/HomeBar";
 import NavBar from "../../components/NavBar";
 import CommonButton from "../../components/CommonButton";
 
 const Home = () => {
     return (
         <Container>
-            <AppBar />
+            <HomeBar />
             <ContentContainer>
                 <LogoImg src={symbol} />
                 <CommonButton text="PREP START!" />
