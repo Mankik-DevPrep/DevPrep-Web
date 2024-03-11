@@ -1,29 +1,43 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { NavLink, useLocation } from "react-router-dom";
 
 const NavBar = () => {
     const icons = [
-        { name: "home", src: "/images/icons/home.svg" },
-        { name: "game", src: "/images/icons/game.svg" },
-        { name: "community", src: "/images/icons/community.svg" },
-        { name: "mypage", src: "/images/icons/mypage.svg" }
+        { name: "home", src: "/images/icons/home.svg", path: "/" },
+        { name: "game", src: "/images/icons/game.svg", path: "/game" },
+        { name: "community", src: "/images/icons/community.svg", path: "/community" },
+        { name: "mypage", src: "/images/icons/mypage.svg", path: "/mypage" }
     ];
 
-    const [selectedIcon, setSelectedIcon] = useState(null);
-    const handleIconClick = (index) => {
-        setSelectedIcon(index);
-    };
+    const location = useLocation();
+    const [selectedIcon, setSelectedIcon] = useState(0);
+
+    useState( () => {
+        const index = icons.findIndex(icon => icon.path === location.pathname);
+        if (index !== -1) {
+            setSelectedIcon(index);
+        }
+    }, [location.pathname]);
+    // const handleIconClick = (index, path) => {
+    //     setSelectedIcon(index);
+    //     navigate(path);
+    // };
 
     return (
         <Container>
             {icons.map((icon, index) => (
                 <IconWrapper 
                     key={index} 
-                    onClick={() => handleIconClick(index)} 
+                    onClick={() => setSelectedIcon(index)} 
                     selected={selectedIcon === index} 
                 >
-                    <Icon 
-                        src={selectedIcon === index ? `images/icons/${icon.name}_selected.svg` : icon.src} />
+                    <NavLinkStyled to={icon.path}>
+                        <Icon 
+                            src={selectedIcon === index ? `images/icons/${icon.name}_selected.svg` : icon.src} 
+                            alt={icon.name}
+                        />
+                    </NavLinkStyled>
                 </IconWrapper>
             ))}
         </Container>
@@ -57,6 +71,8 @@ const IconWrapper = styled.div`
         filter: invert(100%);
     }
 `;
+
+const NavLinkStyled = styled(NavLink)``;
 
 const Icon = styled.img`
     margin-right: 3.5rem;
