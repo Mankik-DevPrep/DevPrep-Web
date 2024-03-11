@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 // pages
 import Home from "./pages/home";
 import Prep from "./pages/prep";
+import SolutionList from "./pages/prep/SolutionList";
 
 import MyPage from "./pages/mypage";
 
@@ -22,6 +23,7 @@ function App() {
 
                 {/* 면접 연습 페이지 */}
                 <Route path="/prep" element={<Prep />} />
+                <Route path="/prep/solution-list" element={<SolutionList />} />
 
                 {/* 마이페이지 */}
                 <Route path="/mypage" element={<MyPage />} />
