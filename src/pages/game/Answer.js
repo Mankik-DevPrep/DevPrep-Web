@@ -6,7 +6,7 @@ import NavBar from "../../components/NavBar";
 import AppBar from "../../components/AppBar";
 import CommonButton from "../../components/CommonButton";
 
-const Solution = () => {
+const Answer = () => {
     const navigate = useNavigate();
     const goToGame = () => {
         console.log("goToGame");
@@ -22,6 +22,6 @@ const Solution = () => {
     );
 };
 
-export default Solution;
+export default Answer;
 
 const Container = styled.div``;
