@@ -1,19 +1,4 @@
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
-
-const Component = () => {
-    const navigate = useNavigate();
-
-    const handleButtonClick = () => {
-        navigate("/userinfo");
-    };
-
-    return (
-        <Button1 onClick={handleButtonClick}>
-            <Text>사용자 정보 입력</Text>
-        </Button1>
-    );
-};
 
 const Button1 = styled.div`
     width: 18.625rem;
@@ -43,4 +28,10 @@ const Text = styled.span`
     justify-content: center;
 `;
 
-export default Component;
+export default function Component() {
+    return (
+        <Button1>
+            <Text>북마크</Text>
+        </Button1>
+    );
+}
