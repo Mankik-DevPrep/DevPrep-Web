@@ -9,15 +9,15 @@ import CommonButton from "../../components/CommonButton";
 const Quiz = () => {
     // 제출 클릭 -> solutoin 화면
     const navigate = useNavigate();
-    const goToSolution = () => {
-        console.log("goToSolution");
-        navigate("/game/solution");
+    const goToAnswer = () => {
+        console.log("goToAnswer");
+        navigate("/game/answer");
     };
 
     return (
         <Container>
             <AppBar />
-            <CommonButton text="SUBMIT" onClick={goToSolution}/>
+            <CommonButton text="SUBMIT" onClick={goToAnswer}/>
             <NavBar />
         </Container>
     );

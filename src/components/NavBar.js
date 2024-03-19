@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 const NavBar = () => {
     const icons = [
@@ -11,30 +11,39 @@ const NavBar = () => {
     ];
 
     const location = useLocation();
+    const navigate = useNavigate();
     const [selectedIcon, setSelectedIcon] = useState(0);
 
-    useState( () => {
-        const index = icons.findIndex(icon => icon.path === location.pathname);
-        if (index !== -1) {
-            setSelectedIcon(index);
-        }
+    useEffect(() => {
+        const index = icons.findIndex(icon => {
+            // 홈 ("/") 경로는 정확히 일치하는 경우만 처리
+            if (icon.path === "/") {
+                return location.pathname === icon.path;
+            }
+            // 그 외 경로는 시작 부분이 일치하는지 확인
+            return location.pathname.startsWith(icon.path);
+        });
+        
+        // 일치하는 인덱스가 없는 경우(-1) 모든 아이콘 선택 해제
+        setSelectedIcon(index);
     }, [location.pathname]);
-    // const handleIconClick = (index, path) => {
-    //     setSelectedIcon(index);
-    //     navigate(path);
-    // };
+    
+    const handleIconClick = (index, path) => {
+        setSelectedIcon(index);
+        navigate(path);
+    };
 
     return (
         <Container>
             {icons.map((icon, index) => (
                 <IconWrapper 
                     key={index} 
-                    onClick={() => setSelectedIcon(index)} 
+                    onClick={() => handleIconClick(index, icon.path)} 
                     selected={selectedIcon === index} 
                 >
                     <NavLinkStyled to={icon.path}>
                         <Icon 
-                            src={selectedIcon === index ? `images/icons/${icon.name}_selected.svg` : icon.src} 
+                            src={selectedIcon === index ? `/images/icons/${icon.name}_selected.svg` : icon.src} 
                             alt={icon.name}
                         />
                     </NavLinkStyled>
