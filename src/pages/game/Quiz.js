@@ -19,16 +19,16 @@ const Quiz = () => {
         <Container>
             <AppBar />
             <QuizContainer>
-                <QuizComponent />
-                <QuizComponent />
-                <QuizComponent />
-                <QuizComponent />
-                <QuizComponent />
-                <QuizComponent />
-                <QuizComponent />
-                <QuizComponent />
-                <QuizComponent />
-                <QuizComponent />
+                <QuizComponent quizNum={"1"}/>
+                <QuizComponent quizNum={"2"}/>
+                <QuizComponent quizNum={"3"}/>
+                <QuizComponent quizNum={"4"}/>
+                <QuizComponent quizNum={"5"}/>
+                <QuizComponent quizNum={"6"}/>
+                <QuizComponent quizNum={"7"}/>
+                <QuizComponent quizNum={"8"}/>
+                <QuizComponent quizNum={"9"}/>
+                <QuizComponent quizNum={"10"}/>
             </QuizContainer>
             <CommonButton text="SUBMIT" onClick={goToAnswer}/>
             <NavBar />
