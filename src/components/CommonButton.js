@@ -21,7 +21,7 @@ const Button = styled.button`
     // 정렬 속성
     margin-left: 5.88rem;
     position: absolute;
-    bottom: 8.69rem;
+    bottom: 8rem;
 
     // text prop 속성
     display: flex;
