@@ -14,7 +14,7 @@ const Home = () => {
                 <LogoImg src={symbol} />
                 <CommonButton text="PREP START!" />
                 <Description>
-                    <BoldText>🌟 DevPrep 소개 <br/></BoldText>
+                    <BoldText>/* DevPrep 소개 */<br/></BoldText>
                     Devprep은 개발 및 IT 직군을 희망하는 <br/> 
                     예비 개발자들을 위한 면접 연습 툴입니다. <br/>
                     사용자의 희망 직무, 기술 스택, <br/> 
