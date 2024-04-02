@@ -15,14 +15,14 @@ const Home = () => {
                 <CommonButton text="PREP START!" />
                 <Description>
                     <BoldText>/* DevPrep 소개 */<br/></BoldText>
-                    Devprep은 개발 및 IT 직군을 희망하는 <br/> 
+                    DevPrep은 개발 및 IT 직군을 희망하는 <br/> 
                     예비 개발자들을 위한 면접 연습 툴입니다. <br/>
                     사용자의 희망 직무, 기술 스택, <br/> 
                     프로젝트 경험을 기반으로 개인별 <br/> 
                     맞춤 면접 질문과 솔루션을 제공합니다.
                     <br/><br/>
                     🚀 성공적인 커리어를 쌓기 위한 첫걸음, <br/>
-                    개발자가 되기 위한 prep을 준비해보세요!
+                    개발자가 되기 위한 prep을 준비해보세요! 😊
                 </Description>
             </ContentContainer>
             <NavBar />
@@ -71,12 +71,13 @@ const Description = styled.div`
     text-align: center;
 
     color: #427D9D;
-    font-size: 1.05rem;
-    padding: 1rem;
+    font-size: 1rem;
+    padding: 0.9rem;
+    line-height: 1.35;
 `;
 
 const BoldText = styled.p`
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 `;
