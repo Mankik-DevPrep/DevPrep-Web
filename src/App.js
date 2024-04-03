@@ -9,6 +9,7 @@ import ResumeList from "./pages/prep/ResumeList";
 
 import MyPage from "./pages/mypage";
 import UserInfo from "./pages/mypage/UserInfo";
+import Practice from "./pages/prep/Practice";
 
 import Game from "./pages/game";
 import Quiz from "./pages/game/Quiz";
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/prep" element={<Prep />} />
                 <Route path="/prep/solution-list" element={<SolutionList />} />
                 <Route path="/prep/resume-list" element={<ResumeList />} />
+                <Route path="/prep/practice" element={<Practice />} />
 
                 {/* 마이페이지 */}
                 <Route path="/mypage" element={<MyPage />} />
