@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 import symbol from "../../assets/images/symbol.png";
 import HomeBar from "../../components/HomeBar";
@@ -7,12 +8,18 @@ import NavBar from "../../components/NavBar";
 import CommonButton from "../../components/CommonButton";
 
 const Home = () => {
+    const navigate = useNavigate();
+    const goToPrep = () => {
+        console.log("goToPrep");
+        navigate("/prep/resume-list");
+    };
+
     return (
         <Container>
             <HomeBar />
             <ContentContainer>
                 <LogoImg src={symbol} />
-                <CommonButton text="PREP START!" />
+                <CommonButton text="PREP START!" onClick={goToPrep}/>
                 <Description>
                     <BoldText>/* DevPrep 소개 */<br/></BoldText>
                     DevPrep은 개발 및 IT 직군을 희망하는 <br/> 
