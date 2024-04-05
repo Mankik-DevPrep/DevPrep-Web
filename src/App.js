@@ -26,9 +26,9 @@ function App() {
 
                 {/* 면접 연습 페이지 */}
                 <Route path="/prep" element={<Prep />} />
-                <Route path="/prep/solution-list" element={<SolutionList />} />
                 <Route path="/prep/resume-list" element={<ResumeList />} />
                 <Route path="/prep/practice" element={<Practice />} />
+                <Route path="/prep/solution-list" element={<SolutionList />} />
 
                 {/* 마이페이지 */}
                 <Route path="/mypage" element={<MyPage />} />
