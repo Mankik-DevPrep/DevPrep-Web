@@ -16,6 +16,8 @@ import Quiz from "./pages/game/Quiz";
 import Answer from "./pages/game/Answer";
 
 import Community from "./pages/community";
+import Post from "./pages/community/Post";
+import View from "./pages/community/View";
 
 function App() {
     return (
@@ -41,6 +43,8 @@ function App() {
 
                 {/* 커뮤니티 페이지 */}
                 <Route path="/community" element={<Community />} />
+                <Route path="/post" element={<Post />} />
+                <Route path="/view" element={<View />} />
             </Routes>
         </div>
     );
